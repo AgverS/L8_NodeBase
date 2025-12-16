@@ -1,29 +1,19 @@
 {
-  "name": "l8_nodebase",
+  "name": "l8-nodebase",
   "version": "1.0.0",
-  "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "dotenv -e .env.development -- nodemon index.js",
+    "build": "dotenv -e .env.production -- node index.js",
+    "deploy": "dotenv -e .env.domain -- node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AgverS/L8_NodeBase.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/AgverS/L8_NodeBase/issues"
-  },
-  "homepage": "https://github.com/AgverS/L8_NodeBase#readme",
   "dependencies": {
-    "bcrypt": "^6.0.0",
-    "dotenv": "^17.2.3"
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5"
   },
   "devDependencies": {
-    "dotenv-cli": "^11.0.0",
+    "dotenv-cli": "^7.4.4",
     "nodemon": "^3.1.11"
   }
 }
