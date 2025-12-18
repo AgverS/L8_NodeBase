@@ -1,6 +1,6 @@
 import os from "os";
 
-// a) основная информация об ОС
+
 export function showOSInfo() {
   console.log("Платформа:", os.platform());
   console.log("Свободная память (GB):", (os.freemem() / 1024 ** 3).toFixed(2));
@@ -9,7 +9,7 @@ export function showOSInfo() {
   console.log("Сетевые интерфейсы:", os.networkInterfaces());
 }
 
-// b) проверка свободной памяти
+
 export function checkFreeMemory() {
   const freeGB = os.freemem() / 1024 ** 3;
   if (freeGB > 4) {
@@ -19,7 +19,7 @@ export function checkFreeMemory() {
   }
 }
 
-// c) доступ по MODE
+
 if (process.env.MODE === "admin") {
   showOSInfo();
   checkFreeMemory();
